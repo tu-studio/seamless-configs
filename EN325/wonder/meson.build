@@ -2,18 +2,25 @@
 # Also the speaker configurations need to start with twonder.
 
 if get_option('node') == 'none'
-    error('Please specify location with -Dnode=...')
+    error('Please specify node with -Dnode=...')
 elif get_option('node') == 'riviera'
-    message('Installing configuration for node riviera.')
-    install_subdir('cwonder', install_dir : get_option('sysconfdir') / 'wonder')
-    install_subdir('twonder/riviera', strip_directory : true, install_dir : get_option('sysconfdir') / 'wonder' / 'twonder')
+    install_subdir('cwonder', install_dir : get_option('sysconfdir') / 'wonder' + install_postfix)
+    install_subdir('twonder/riviera', strip_directory : true, install_dir : get_option('sysconfdir') / 'wonder' + install_postfix / 'twonder')
 elif get_option('node') == 'wintermute'
-    message('Installing configuration for node wintermute.')
-    install_subdir('twonder/wintermute', strip_directory : true, install_dir : get_option('sysconfdir') / 'wonder' / 'twonder')
+    install_subdir('twonder/wintermute', strip_directory : true, install_dir : get_option('sysconfdir') / 'wonder' + install_postfix / 'twonder')
 else
     error('Unknown node specified.')
 endif
 
 # Install the remaining files if the node is correct, no error is thrown.
-install_data('cluster.conf', install_dir : get_option('sysconfdir') / 'wonder')
-install_data('twonder/twonder_config.xml', install_dir : get_option('sysconfdir') / 'wonder' / 'twonder')
+install_data('cluster.conf', install_dir : get_option('sysconfdir') / 'wonder' + install_postfix)
+install_data('twonder/twonder_config.xml', install_dir : get_option('sysconfdir') / 'wonder' + install_postfix / 'twonder')
+
+if get_option('versioned_install')
+meson.add_install_script(
+	'sh', '-c',
+	'ln -s -f @0@ @1@'.format(
+        get_option('prefix') / get_option('sysconfdir') / 'wonder' + install_postfix + '/',
+        get_option('prefix') / get_option('sysconfdir') / 'wonder')
+)
+endif

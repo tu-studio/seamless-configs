@@ -1,3 +1,3 @@
-option('jack_service', type : 'boolean', value : true, description : 'Install jack service')
 option('location', type : 'combo', choices: ['none', 'EN325', 'HUFO'], value : 'none', description : 'Set location')
 option('node', type : 'string', value : 'none', description : 'Set node')
+option('versioned_install', type : 'boolean', value : false)

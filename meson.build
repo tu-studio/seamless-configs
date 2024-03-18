@@ -1,10 +1,15 @@
-project('EN325-config-files', 'cpp',
-        version:'0.1.0',
+project('seamless-configs', 'cpp',
+        version: run_command('git', 'describe', '--dirty', check: true).stdout().strip(),
         license:'Apache-2.0',
         default_options:['cpp_std=c++20'])
 
-# subdir('systemd')
 message('Location: ' + get_option('location'))
+
+if get_option('versioned_install')
+  	install_postfix = '-' + meson.project_version()
+else
+	install_postfix = ''
+endif
 
 if get_option('location') == 'none'
     error('Please specify location with -Dlocation=...')
@@ -16,13 +21,11 @@ else
     error('Invalid location')
 endif
 
-if get_option('jack_service')
-    install_data('systemd/user/jack.service', install_dir: '/etc/systemd/user')
-endif
+install_data('systemd/user/jack.service', install_dir: '/etc/systemd/user')
 
-summary({'Install jack service': get_option('jack_service'),
-         'Location': get_option('location'),
+summary({'Location': get_option('location'),
          'Node': get_option('node'),
-         'Systemd user directory': '/etc/systemd/user',
-         'Configuration directory': get_option('prefix') / get_option('sysconfdir')},
-         section: 'Configuration')
+         'Systemd user services install directory': '/etc/systemd/user',
+         'Configuration file install directory': get_option('prefix') / get_option('sysconfdir'),
+         'Versioned install': get_option('versioned_install')},
+         section: 'Options')
