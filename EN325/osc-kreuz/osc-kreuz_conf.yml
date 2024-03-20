@@ -28,4 +28,4 @@ receivers:
     hosts:
       - hostname: newmark.ak.tu-berlin.de
         port: 58100
-    updateintervall: 0
+    updateintervall: 50
