@@ -22,10 +22,10 @@ receivers:
       - path: /source/send/wfs
         renderer: wfs
         type: gain
-    updateintervall: 5
+    updateintervall: 0
 
   - type: wonder
     hosts:
       - hostname: newmark.ak.tu-berlin.de
         port: 58100
-    updateintervall: 5
+    updateintervall: 0
