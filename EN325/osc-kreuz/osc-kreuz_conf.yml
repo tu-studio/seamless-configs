@@ -12,21 +12,11 @@ globalconfig:
   render_units: ["ambi", "wfs", "reverb"]
 # changed to remove sendport, rename listenport to port
 receivers:
-  - type: audiorouter
-    hosts:
-      - hostname: riviera.ak.tu-berlin.de
-        port: 57120
-    updateintervall: 5
-
-  - type: audiorouterWFS
-    hosts:
-      - hostname: riviera.ak.tu-berlin.de
-        port: 57120
-    updateintervall: 5
-
   - type: audiomatrix
     hosts:
       - hostname: newmark.ak.tu-berlin.de
+        port: 8080
+      - hostname: wintermute.ak.tu-berlin.de
         port: 8080
     paths:
       - path: /source/send/wfs
@@ -36,12 +26,6 @@ receivers:
 
   - type: wonder
     hosts:
-      - hostname: riviera.ak.tu-berlin.de
+      - hostname: newmark.ak.tu-berlin.de
         port: 58100
-    updateintervall: 50
-
-  - type: scengine
-    hostname: riviera.ak.tu-berlin.de
-    port: 57120
-    updateintervall: 10
-    dataformat: aedrad
+    updateintervall: 5
