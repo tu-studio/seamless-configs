@@ -8,7 +8,7 @@ WantedBy=default.target
 # Type notify available with jack version 1.9.13
 Type=notify
 PrivateTmp=true                          
-EnvironmentFile=/usr/local/etc/jack.conf
+EnvironmentFile=/usr/local/etc/jack/jack.conf
 ExecStart=/usr/bin/jackd $JACK_OPTIONS -d $DRIVER -d $DEVICE $DRIVER_SETTINGS
 LimitRTPRIO=95
 LimitRTTIME=infinity
