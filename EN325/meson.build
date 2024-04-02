@@ -26,4 +26,4 @@ endif
 
 subdir('audio-matrix')
 subdir('wonder')
-subdir('jack-wire-puller')
+subdir('jack-connection-manager')
