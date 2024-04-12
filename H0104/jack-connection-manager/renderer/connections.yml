@@ -1,0 +1,62 @@
+# system ins to audiomatrix
+- client: system:capture_
+  n_channels: 64
+  connections:
+    - client: audio-matrix:input_
+      start_index: 0
+
+# audiomatrix to twonders
+- client: audio-matrix:wfs_
+  n_channels: 64
+  start_index: 0
+  connections:
+    - client: twonder1:input
+    - client: twonder2:input
+    - client: twonder3:input
+    - client: twonder4:input
+    - client: twonder5:input
+    - client: twonder6:input
+    - client: twonder7:input
+    - client: twonder8:input
+
+# twonders to system outputs
+- client: twonder1:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 1
+- client: twonder2:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 17
+- client: twonder3:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 33
+- client: twonder4:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 49
+- client: twonder5:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 65
+- client: twonder6:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 81
+- client: twonder7:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 97
+- client: twonder8:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 113

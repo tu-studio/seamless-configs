@@ -1,0 +1,32 @@
+- client: system:capture_
+  n_channels: 64
+  connections:
+    - client: audio-matrix:input_
+      start_index: 0
+- client: audio-matrix:wfs_
+  n_channels: 64
+  start_index: 0
+  connections:
+    - client: twonder1:input
+    - client: twonder2:input
+    - client: twonder3:input
+    - client: twonder4:input
+- client: twonder1:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+- client: twonder2:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 17
+- client: twonder3:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 33
+- client: twonder4:speaker
+  n_channels: 16
+  connections:
+    - client: system:playback_
+      start_index: 49

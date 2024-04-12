@@ -1,0 +1,23 @@
+# The speaker configurations need to have the same folder structure for the twonder start script to work.
+# Also the speaker configurations need to start with twonder.
+
+if get_option('node') == playername
+    install_subdir('cwonder', install_dir : get_option('sysconfdir') / 'wonder' + install_postfix)
+elif get_option('node').startswith(renderername)
+    nodename = get_option('node').replace(renderername, 'renderer')
+    install_subdir('twonder' / nodename, strip_directory : true, install_dir : get_option('sysconfdir') / 'wonder' + install_postfix / 'twonder')
+    install_data('twonder/twonder_config.xml', install_dir : get_option('sysconfdir') / 'wonder' + install_postfix / 'twonder')
+
+endif
+
+# Install the remaining files if the node is correct, no error is thrown.
+install_data('cluster.conf', install_dir : get_option('sysconfdir') / 'wonder' + install_postfix)
+
+if get_option('versioned_install')
+meson.add_install_script(
+	'sh', '-c',
+	'ln -s -f -n @0@ @1@'.format(
+        get_option('prefix') / get_option('sysconfdir') / 'wonder' + install_postfix + '/',
+        get_option('prefix') / get_option('sysconfdir') / 'wonder')
+)
+endif

@@ -17,6 +17,8 @@ elif get_option('location') == 'EN325'
     subdir('EN325')
 elif get_option('location') == 'HUFO'
     subdir('HUFO')
+elif get_option('location') == 'H0104'
+    subdir('H0104')
 else
     error('Invalid location')
 endif
