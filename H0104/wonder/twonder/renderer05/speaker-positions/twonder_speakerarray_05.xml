@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE speakerarray SYSTEM "twonder_speakerarray.dtd">
+
+<speakerarray>
+  <segment id="97" numspeak="8" winwidth="0" startx="-7.680685" starty="0.020000" startz="2.115897" endx="-6.975685" endy="0.020000" endz="2.115851" normalx="-0.000000" normaly="1.000000" normalz="0.000000" />
+  <segment id="98" numspeak="8" winwidth="0" startx="-6.871998" starty="0.020000" startz="2.115844" endx="-6.166998" endy="0.020000" endz="2.115798" normalx="-0.000000" normaly="1.000000" normalz="0.000000" />
+</speakerarray>

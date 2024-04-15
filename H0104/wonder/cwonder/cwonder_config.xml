@@ -31,17 +31,15 @@
 <!DOCTYPE cwonder_config SYSTEM "cwonder_config.dtd">
 
 <cwonder_config>
-<settings projectpath="/home/wfs/wonder3/projects" maxNoSources="128" />
-    <renderpolygon roomname="EN325">
-		<point x="-1.620" y="3.023" z="1.4"/>
-		<point x="1.620" y="3.023" z="1.4"/>
-		<point x="2.430" y="1.620" z="1.4"/>
-		<point x="2.430" y="-1.620" z="1.4"/>
-		<point x="1.620" y="-3.023" z="1.4"/>
-		<point x="-1.620" y="-3.023" z="1.4"/>
-		<point x="-2.430" y="-1.620" z="1.4"/>
-    <point x="-2.430" y="1.620" z="1.4"/>
-		<elevation y1="1.4" z1="1.4" y2="1.4" z2="1.4"/>
+<settings projectpath="/home/wfs/wonder3/projects" maxNoSources="64" />
+    <renderpolygon roomname="H0104">
+	<point x="-7.848447" y="0.2" z="2.112706" />
+	<point x="-10.262484" y="8.606462" z="2.113595"/>
+	<point x="-10.093403" y="25.649183" z="6.518696" />
+	<point x="10.091553" y="25.580261" z="6.535528" />
+	<point x="10.077685" y="8.638374" z="2.108096" />
+	<point x="7.580686" y="0.2" z="2.114949" />
+	<elevation y1="8.8" z1="0.0" y2="25.7" z2="4.4"  />
     </renderpolygon>
 </cwonder_config>
 
