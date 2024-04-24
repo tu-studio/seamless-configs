@@ -15,7 +15,7 @@ meson.add_install_script(
 )
 endif
 
-playername = 'insertPlayerNameHereUwU'
+playername = 'kagemusha'
 renderername = 'kaoru'
 
 if get_option('node') == 'none'
