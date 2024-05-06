@@ -40,7 +40,15 @@
   connections:
     - client: AllRADecoder:in_
       start_index: 1
+
 - client: AllRADecoder:out_
+  n_channels: 21
+  start_index: 1
+  connections:
+    - client: DistanceCompensator:in_
+      start_index: 1
+
+- client: DistanceCompensator:out_
   n_channels: 21
   start_index: 1
   connections:
