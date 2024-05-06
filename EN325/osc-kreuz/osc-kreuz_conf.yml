@@ -25,6 +25,7 @@ receivers:
         type: gain
       - path: /source/pos/aed
         type: position
+        format: aedrad
     updateintervall: 0
   - type: audiomatrix
     hosts:
