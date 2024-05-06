@@ -3,6 +3,8 @@
   connections:
     - client: audio-matrix:input_
       start_index: 0
+
+# WFS
 - client: audio-matrix:wfs_
   n_channels: 64
   start_index: 0
@@ -30,3 +32,17 @@
   connections:
     - client: system:playback_
       start_index: 49
+
+# HOA
+- client: audio-matrix:hoa_
+  n_channels: 16
+  start_index: 0
+  connections:
+    - client: AllRADecoder:in_
+      start_index: 1
+- client: AllRADecoder:out_
+  n_channels: 21
+  start_index: 1
+  connections:
+    - client: system:playback_
+      start_index: 65

@@ -11,34 +11,34 @@ tracks:
           osc_paths: /source/send/wfs
       - gain:
           factor: 1
-#           type: HP # HP/LP
-#           freq: 100 # in Hz
-#       - gain: 
-#           factor: 1
-#       - limiter: 
-#           type: brickwall
-#           threshold: 0
-#       - delay: 
-#           time: 0 # in ms
+  #           type: HP # HP/LP
+  #           freq: 100 # in Hz
+  #       - gain:
+  #           factor: 1
+  #       - limiter:
+  #           type: brickwall
+  #           threshold: 0
+  #       - delay:
+  #           time: 0 # in ms
 
-#   - name: hoa
-#     modules:
-#       - gain: 
-#           factor: 1
-#           osc_controllable: true
-#           osc_paths: hoa
-#       - distance_compensator:
-#       - hoa_encoder:
-#           order: 3
-#       - filter:
-#           type: HP # HP/LP
-#           freq: 100 # in Hz
-#       - gain: 5
-#       - limiter: 
-#           type: brickwall
-#           threshold: 0
-#       - delay: 20 # in ms
-
+  - name: hoa
+    modules:
+      - gain:
+          factor: 1
+          osc_controllable: true
+          osc_paths: /source/send/hoa
+      - hoa_encoder:
+          order: 3
+          osc_controllable: true
+          osc_paths: /source/pos/aed
+      # - filter:
+      #     type: HP # HP/LP
+      #     freq: 100 # in Hz
+      # - gain: 5
+      # - limiter:
+      #     type: brickwall
+      #     threshold: 0
+      # - delay: 20 # in ms
 #   - name: lfe
 #     modules:
 #       - gain: 1
@@ -49,7 +49,7 @@ tracks:
 #           type: LP
 #           freq: 120
 #       - gain: 1
-#       - limiter: 
+#       - limiter:
 #           type: brickwall
 #           threshold: -3
 #       - delay: 30 # in ms
@@ -65,7 +65,7 @@ tracks:
 #           type: LP
 #           freq: 120
 #       - gain: 1
-#       - limiter: 
+#       - limiter:
 #           type: brickwall
 #           threshold: -3
 #       - delay: 30 # in ms

@@ -16,6 +16,18 @@ receivers:
     hosts:
       - hostname: newmark.ak.tu-berlin.de
         port: 8080
+    paths:
+      - path: /source/send/wfs
+        renderer: wfs
+        type: gain
+      - path: /source/send/hoa
+        renderer: ambi
+        type: gain
+      - path: /source/pos/aed
+        type: position
+    updateintervall: 0
+  - type: audiomatrix
+    hosts:
       - hostname: wintermute.ak.tu-berlin.de
         port: 8080
     paths:
@@ -23,7 +35,6 @@ receivers:
         renderer: wfs
         type: gain
     updateintervall: 0
-
   - type: wonder
     hosts:
       - hostname: newmark.ak.tu-berlin.de
