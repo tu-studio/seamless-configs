@@ -1,5 +1,5 @@
 globalconfig:
-  oscr_ip: 130.149.23.33
+  oscr_ip: 130.149.23.230
   inputport_ui: 4455 # inputport for UI-Clients, blocks inputport_data for short time
   inputport_data: 4007 # inputport for automation-data clients
   inputport_settings: 4999 # global configs can be changed with this port
@@ -9,14 +9,15 @@ globalconfig:
   number_direct_sends: 46 # including subwoofer
   send_changes_only: 1 # checks every input for changes, if set to 1 might be slower
   data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
-  render_units: ["ambi", "wfs", "reverb"]
+  render_units: ["wfs"]
 # changed to remove sendport, rename listenport to port
 receivers:
   - type: audiomatrix
     hosts:
-      - hostname: newmark.ak.tu-berlin.de
+      # TODO add all hosts
+      - hostname: 130.149.23.232
         port: 8080
-      - hostname: wintermute.ak.tu-berlin.de
+      - hostname: 130.149.23.211
         port: 8080
     paths:
       - path: /source/send/wfs
@@ -26,6 +27,6 @@ receivers:
 
   - type: wonder
     hosts:
-      - hostname: newmark.ak.tu-berlin.de
+      - hostname: localhost
         port: 58100
     updateintervall: 50
