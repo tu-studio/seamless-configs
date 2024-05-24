@@ -22,6 +22,7 @@ if get_option('node') == 'none'
     error('Please specify node with -Dnode=...')
 elif get_option('node') == playername
     subdir('osc-kreuz')
+    install_data('systemd/user/jack_dante.service', install_dir: '/etc/systemd/user')
 elif get_option('node').startswith(renderername)
 else
     error('Unknown node specified.')

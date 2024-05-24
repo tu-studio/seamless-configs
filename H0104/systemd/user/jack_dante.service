@@ -1,0 +1,13 @@
+[Unit]
+Description=DantePCIe as second audio-input
+After=jack.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=alsa_in -d plughw:DantePCIe -c 128 -C 5 -j dante -p512
+LimitRTPRIO=95
+LimitRTTIME=infinity
+LimitMEMLOCK=infinity
