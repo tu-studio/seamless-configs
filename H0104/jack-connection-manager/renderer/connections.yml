@@ -1,6 +1,7 @@
 # system ins to audiomatrix
 - client: system:capture_
   n_channels: 64
+  start_index: 3
   connections:
     - client: audio-matrix:input_
       start_index: 0
