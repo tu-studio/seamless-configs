@@ -1,4 +1,4 @@
-port: 8080
+port: 54321
 n_input_channels: 64
 
 tracks:
@@ -13,8 +13,8 @@ tracks:
 #       - filter:
 #           type: HP # HP/LP
 #           freq: 100 # in Hz
-#       - limiter: 
+#       - limiter:
 #           type: brickwall
 #           threshold: 0
-#       - delay: 
+#       - delay:
 #           time: 0 # in ms
