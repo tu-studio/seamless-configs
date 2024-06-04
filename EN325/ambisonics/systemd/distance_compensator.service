@@ -1,0 +1,13 @@
+[Unit]
+Description=DistanceCompensator
+After=jack.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=DistanceCompensator
+LimitRTPRIO=95
+LimitRTTIME=infinity
+LimitMEMLOCK=infinity

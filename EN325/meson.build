@@ -19,6 +19,7 @@ if get_option('node') == 'none'
     error('Please specify node with -Dnode=...')
 elif get_option('node') == 'riviera'
     subdir('osc-kreuz')
+    subdir('ambisonics')
 elif get_option('node') == 'wintermute'
 else
     error('Unknown node specified.')

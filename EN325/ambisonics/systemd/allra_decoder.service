@@ -1,0 +1,13 @@
+[Unit]
+Description=AllRADecoder
+After=jack.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=AllRADecoder
+LimitRTPRIO=95
+LimitRTTIME=infinity
+LimitMEMLOCK=infinity
