@@ -31,6 +31,8 @@ tracks:
           order: 3
           osc_controllable: true
           osc_paths: /source/pos/aed
+      - gain:
+          factor: 0.482
       # - filter:
       #     type: HP # HP/LP
       #     freq: 100 # in Hz
