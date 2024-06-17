@@ -10,6 +10,8 @@ globalconfig:
   send_changes_only: 1 # checks every input for changes, if set to 1 might be slower
   data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
   render_units: ["ambi", "wfs", "reverb"]
+  room_scaling_factor: 6.046 # all incoming positon changes are scaled by this factor
+
 # changed to remove sendport, rename listenport to port
 receivers:
   - type: audiomatrix
