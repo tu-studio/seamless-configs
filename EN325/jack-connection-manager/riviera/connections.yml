@@ -1,9 +1,15 @@
 - client: system:capture_
-  n_channels: 64
+  n_channels: 32
   connections:
     - client: audio-matrix:input_
       start_index: 0
 
+- client: system:capture_
+  n_channels: 16
+  start_index: 33
+  connections:
+    - client: AllRADecoder:in_
+      start_index: 1
 # WFS
 - client: audio-matrix:wfs_
   n_channels: 64
