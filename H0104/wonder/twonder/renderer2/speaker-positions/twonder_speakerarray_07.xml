@@ -2,6 +2,6 @@
 <!DOCTYPE speakerarray SYSTEM "twonder_speakerarray.dtd">
 
 <speakerarray>
-  <segment id="35" numspeak="8" winwidth="0" startx="-5.372647000000001" starty="10.086059" startz="4.766271" endx="-6.051235000000002" endy="10.086668" endz="4.957432" normalx="-0.000897" normaly="-1.0" normalz="0.000000" />
-  <segment id="36" numspeak="8" winwidth="0" startx="-6.150518999999999" starty="10.086757" startz="4.985401" endx="-6.8291080000000015" endy="10.087366" endz="5.176562" normalx="-0.000897" normaly="-1.0" normalz="0.000000" />
+  <segment id="32" numspeak="8" winwidth="0" startx="-3.717301000000001" starty="10.170163" startz="4.328011" endx="-4.395888999999999" endy="10.170772" endz="4.519172" normalx="-0.000897" normaly="-1.0" normalz="0.000000" />
+  <segment id="33" numspeak="8" winwidth="0" startx="-4.4951740000000004" starty="10.170861" startz="4.547141" endx="-5.173762000000002" endy="10.17147" endz="4.738302" normalx="-0.000897" normaly="-1.0" normalz="0.000000" />
 </speakerarray>
