@@ -4,12 +4,22 @@
     - client: audio-matrix:input_
       start_index: 0
 
+# Encoded Ambisonics to decoder
 - client: system:capture_
   n_channels: 16
   start_index: 33
   connections:
     - client: AllRADecoder:in_
       start_index: 1
+
+# LFE direct
+- client: system:capture_
+  n_channels: 2
+  start_index: 50
+  connections:
+    - client: system:playback_
+      start_index: 87
+
 # WFS
 - client: audio-matrix:wfs_
   n_channels: 64
