@@ -14,11 +14,13 @@
 
 # LFE direct
 - client: system:capture_
-  n_channels: 2
+  n_channels: 1
   start_index: 50
   connections:
     - client: system:playback_
       start_index: 87
+    - client: system:playback_
+      start_index: 88
 
 # WFS
 - client: audio-matrix:wfs_
