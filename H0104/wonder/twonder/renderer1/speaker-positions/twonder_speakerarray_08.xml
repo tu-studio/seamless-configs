@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <!DOCTYPE speakerarray SYSTEM "twonder_speakerarray.dtd">
-
+<!-- This empty speakerarray exists, so the twonder numbering doesn't get messed up -->
 <speakerarray>
 </speakerarray>
