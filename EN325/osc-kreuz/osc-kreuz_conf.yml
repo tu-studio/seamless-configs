@@ -25,6 +25,9 @@ receivers:
       - path: /source/send/hoa
         renderer: ambi
         type: gain
+      - path: /source/send/sub
+        renderer: ambi
+        type: gain
       - path: /source/pos/aed
         type: position
         format: aedrad
