@@ -10,9 +10,9 @@ tracks:
           osc_path: /source/send/wfs
       - gain:
           factor: 1
-#       - filter:
-#           type: HP # HP/LP
-#           freq: 100 # in Hz
+      # - filter:
+      #     type: HP # HP/LP
+      #     freq: 100 # in Hz
 #       - limiter: 
 #           type: brickwall
 #           threshold: 0

@@ -11,9 +11,9 @@ tracks:
           osc_path: /source/send/wfs
       - gain:
           factor: 1
-      - filter:
-          type: HP
-          freq: 150
+    #   - filter:
+    #       type: HP
+    #       freq: 150
   #           type: HP # HP/LP
   #           freq: 100 # in Hz
   #       - gain:
@@ -38,7 +38,7 @@ tracks:
           factor: 0.492
       - filter:
           type: HP
-          freq: 150
+          freq: 100
   - name: sub
     modules:
       - gain:
@@ -48,7 +48,7 @@ tracks:
       - gain: 0.1
       - filter:
           type: LP
-          freq: 150
+          freq: 100
       # - filter:
       #     type: HP # HP/LP
       #     freq: 100 # in Hz
