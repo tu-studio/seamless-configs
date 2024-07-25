@@ -45,6 +45,7 @@ tracks:
           factor: 0
           osc_controllable: true
           osc_path: /source/send/sub
+      - sum
       - gain: 0.1
       - filter:
           type: LP
