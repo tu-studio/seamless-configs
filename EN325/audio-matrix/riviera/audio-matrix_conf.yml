@@ -50,6 +50,8 @@ tracks:
       - filter:
           type: LP
           freq: 100
+      - distance_gain:
+          osc_path: /source/pos/dist
       # - filter:
       #     type: HP # HP/LP
       #     freq: 100 # in Hz
