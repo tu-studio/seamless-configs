@@ -32,7 +32,7 @@ receivers:
         format: aedrad
       - path: /source/pos/dist
         type: position
-        format: dist
+        format: aed
     updateintervall: 0
   - type: audiomatrix
     hosts:
