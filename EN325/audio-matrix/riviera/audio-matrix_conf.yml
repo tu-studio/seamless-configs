@@ -45,13 +45,14 @@ tracks:
           factor: 0
           osc_controllable: true
           osc_path: /source/send/sub
+      - distance_gain:
+          osc_path: /source/pos/dist
       - sum
       - gain: 0.1
       - filter:
           type: LP
           freq: 100
-      - distance_gain:
-          osc_path: /source/pos/dist
+      
       # - filter:
       #     type: HP # HP/LP
       #     freq: 100 # in Hz
