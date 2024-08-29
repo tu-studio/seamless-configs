@@ -1,6 +1,6 @@
 [Unit]
 Description=AllRADecoder
-After=jack.service
+After=jack.service jack-connection-manager.service
 
 [Install]
 WantedBy=default.target

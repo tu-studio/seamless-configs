@@ -8,9 +8,12 @@ tracks:
       - gain:
           factor: 0
           osc_controllable: true
-          osc_paths: /source/send/wfs
+          osc_path: /source/send/wfs
       - gain:
           factor: 1
+    #   - filter:
+    #       type: HP
+    #       freq: 150
   #           type: HP # HP/LP
   #           freq: 100 # in Hz
   #       - gain:
@@ -26,13 +29,30 @@ tracks:
       - gain:
           factor: 0
           osc_controllable: true
-          osc_paths: /source/send/hoa
+          osc_path: /source/send/hoa
       - hoa_encoder:
           order: 3
           osc_controllable: true
-          osc_paths: /source/pos/aed
+          osc_path: /source/pos/aed
       - gain:
           factor: 0.492
+      - filter:
+          type: HP
+          freq: 100
+  - name: sub
+    modules:
+      - gain:
+          factor: 0
+          osc_controllable: true
+          osc_path: /source/send/sub
+      - distance_gain:
+          osc_path: /source/pos/dist
+      - sum
+      - gain: 0.1
+      - filter:
+          type: LP
+          freq: 100
+      
       # - filter:
       #     type: HP # HP/LP
       #     freq: 100 # in Hz
@@ -45,7 +65,7 @@ tracks:
 #     modules:
 #       - gain: 1
 #         osc_controllable: true
-#         osc_paths: lfe
+#         osc_path: lfe
 #       - sum:
 #       - filter:
 #           type: LP
@@ -60,7 +80,7 @@ tracks:
 #     modules:
 #       - gain: 1
 #         osc_controllable: true
-#         osc_paths: [wfs, hoa]
+#         osc_path: [wfs, hoa]
 #       - distance_compensator
 #       - sum
 #       - filter:

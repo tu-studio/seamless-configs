@@ -7,12 +7,12 @@ tracks:
       - gain:
           factor: 0
           osc_controllable: true
-          osc_paths: /source/send/wfs
+          osc_path: /source/send/wfs
       - gain:
           factor: 1
-#       - filter:
-#           type: HP # HP/LP
-#           freq: 100 # in Hz
+      # - filter:
+      #     type: HP # HP/LP
+      #     freq: 100 # in Hz
 #       - limiter: 
 #           type: brickwall
 #           threshold: 0
