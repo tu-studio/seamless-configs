@@ -39,6 +39,7 @@ tracks:
       - filter:
           type: HP
           freq: 100
+      - delay: 8 # delay to sync with the sub, 8 ms is a rough guesstimate
   - name: sub
     modules:
       - gain:
