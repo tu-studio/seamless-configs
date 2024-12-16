@@ -35,4 +35,4 @@ receivers:
     hosts:
       - hostname: tengo
         port: 58100
-    updateintervall: 50
+    updateintervall: 150
