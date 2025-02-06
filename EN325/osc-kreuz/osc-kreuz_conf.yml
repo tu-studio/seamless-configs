@@ -1,4 +1,4 @@
-globalconfig:
+global:
   ip: 0.0.0.0
   port_ui: 4455 # inputport for UI-Clients, blocks inputport_data for short time
   port_data: 4007 # inputport for automation-data clients
@@ -6,10 +6,20 @@ globalconfig:
   number_sources: 64
   max_gain: 2 # max gain for the audiorouter
   number_direct_sends: 46 # including subwoofer
-  send_changes_only: 1 # checks every input for changes, if set to 1 might be slower
+  send_changes_only: true # checks every input for changes, if set to 1 might be slower
   data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
   render_units: ["ambi", "wfs"]
   room_scaling_factor: 6.046 # all incoming positon changes are scaled by this factor
+  room_name: EN325
+  room_polygon:
+    - [3.023, 1.620, 1.4]
+    - [3.023, -1.620, 1.4]
+    - [1.620, -2.430, 1.4]
+    - [-1.620, -2.430, 1.4]
+    - [-3.023, -1.620, 1.4]
+    - [-3.023, 1.620, 1.4]
+    - [-1.620, 2.430, 1.4]
+    - [1.620, 2.430, 1.4]
 
 receivers:
   - type: audiomatrix
@@ -42,8 +52,3 @@ receivers:
         renderer: wfs
         type: gain
     updateintervall: 0
-  - type: wonder
-    hosts:
-      - hostname: newmark.ak.tu-berlin.de
-        port: 58100
-    updateintervall: 50
