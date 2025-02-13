@@ -6,15 +6,22 @@ global:
   number_sources: 64
   max_gain: 2 # max gain for the audiorouter
   number_direct_sends: 46 # including subwoofer
-  send_changes_only: 1 # checks every input for changes, if set to 1 might be slower
+  send_changes_only: true # checks every input for changes, if set to 1 might be slower
   data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
   render_units: ["wfs"]
   room_scaling_factor: 25.4492
+  room_name: H0104
+  room_polygon:
+    - [12.7246, 7.7629470000000005, 2.112706]
+    - [4.318137999999999, 10.176984000000001, 2.113595]
+    - [-12.724583, 10.007903, 6.518696]
+    - [-12.655661, -10.177052999999999, 6.535528]
+    - [4.286225999999999, -10.163185, 2.108096]
+    - [12.7246, -7.666186, 2.114949]
 # changed to remove sendport, rename listenport to port
 receivers:
   - type: audiomatrix
     hosts:
-      # TODO add all hosts
       - hostname: kaoru1
         port: 54321
       - hostname: kaoru2
@@ -30,9 +37,3 @@ receivers:
         renderer: wfs
         type: gain
     updateintervall: 0
-
-  - type: wonder
-    hosts:
-      - hostname: tengo
-        port: 58100
-    updateintervall: 150
