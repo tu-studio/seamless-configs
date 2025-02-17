@@ -1,0 +1,79 @@
+global:
+  ip: 0.0.0.0
+  port_ui: 4455 # inputport for UI-Clients, blocks inputport_data for short time
+  port_data: 4007 # inputport for automation-data clients
+  port_settings: 4999 # global configs can be changed with this port
+  number_sources: 64
+  max_gain: 2 # max gain for the audiorouter
+  number_direct_sends: 46 # including subwoofer
+  send_changes_only: true # checks every input for changes, if set to 1 might be slower
+  data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
+  render_units: ["ambi", "wfs"]
+  room_scaling_factor: 12.108 # all incoming positon changes are scaled by this factor
+  room_name: HuFo
+  room_polygon:
+    - [2.112, 6.051, 2.014]
+    - [2.593, 5.392, 2.014]
+    - [3.018, 4.695, 2.014]
+    - [3.382, 3.964, 2.014]
+    - [3.684, 3.205, 2.014]
+    - [3.921, 2.424, 2.014]
+    - [4.091, 1.625, 2.014]
+    - [4.194, 0.816, 2.014]
+    - [4.228, -0.0, 2.014]
+    - [4.194, -0.816, 2.014]
+    - [4.091, -1.626, 2.014]
+    - [3.921, -2.424, 2.014]
+    - [3.684, -3.206, 2.014]
+    - [3.382, -3.964, 2.014]
+    - [3.017, -4.695, 2.014]
+    - [2.593, -5.392, 2.014]
+    - [2.107, -6.054, 2.014]
+    - [-2.112, -6.051, 2.014]
+    - [-2.593, -5.392, 2.014]
+    - [-3.018, -4.695, 2.014]
+    - [-3.382, -3.964, 2.014]
+    - [-3.684, -3.205, 2.014]
+    - [-3.921, -2.424, 2.014]
+    - [-4.091, -1.625, 2.014]
+    - [-4.194, -0.816, 2.014]
+    - [-4.228, -0.0, 2.014]
+    - [-4.194, 0.816, 2.014]
+    - [-4.091, 1.626, 2.014]
+    - [-3.921, 2.424, 2.014]
+    - [-3.684, 3.206, 2.014]
+    - [-3.382, 3.964, 2.014]
+    - [-3.017, 4.695, 2.014]
+    - [-2.593, 5.392, 2.014]
+    - [-2.107, 6.054, 2.014]
+
+receivers:
+  - type: audiomatrix
+    hosts:
+      - hostname: localhost
+        port: 54321
+    paths:
+      - path: /source/send/hoa
+        renderer: ambi
+        type: gain
+      - path: /source/send/sub
+        renderer: ambi
+        type: gain
+      - path: /source/pos/aed
+        type: position
+        format: aedrad
+      - path: /source/pos/dist
+        type: position
+        format: dist
+    updateintervall: 0
+  - type: audiomatrix
+    hosts:
+      - hostname: 3900-ZG-RE-02.asg
+        port: 54321
+      - hostname: 3900-ZG-RE-03.asg
+        port: 54321
+    paths:
+      - path: /source/send/wfs
+        renderer: wfs
+        type: gain
+    updateintervall: 0
