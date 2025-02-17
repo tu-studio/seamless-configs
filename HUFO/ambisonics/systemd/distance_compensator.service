@@ -1,0 +1,14 @@
+[Unit]
+Description=DistanceCompensator
+After=jack.service jack-connection-manager.service
+
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Type=simple
+ExecStart=DistanceCompensator
+LimitRTPRIO=95
+LimitRTTIME=infinity
+LimitMEMLOCK=infinity
