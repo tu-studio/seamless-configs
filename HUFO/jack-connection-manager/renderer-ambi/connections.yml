@@ -1,0 +1,63 @@
+- client: system:capture_
+  n_channels: 32
+  connections:
+    - client: audio-matrix:input_
+      start_index: 0
+
+# Encoded Ambisonics to decoder
+- client: system:capture_
+  n_channels: 16
+  start_index: 33
+  connections:
+    - client: AllRADecoder:in_
+      start_index: 1
+
+# LFE direct
+- client: system:capture_
+  n_channels: 1
+  start_index: 50
+  connections:
+    - client: system:playback_
+      start_index: 46
+    - client: system:playback_
+      start_index: 47
+    - client: system:playback_
+      start_index: 48
+    - client: system:playback_
+      start_index: 49
+
+# Sub Crossover
+- client: audio-matrix:sub_
+  n_channels: 1
+  start_index: 0
+  connections:
+    - client: system:playback_
+      start_index: 46
+    - client: system:playback_
+      start_index: 47
+    - client: system:playback_
+      start_index: 48
+    - client: system:playback_
+      start_index: 49
+
+# HOA
+- client: audio-matrix:hoa_
+  n_channels: 16
+  start_index: 0
+  connections:
+    - client: AllRADecoder:in_
+      start_index: 1
+
+- client: AllRADecoder:out_
+  n_channels: 45
+  start_index: 1
+  connections:
+    - client: DistanceCompensator:in_
+      start_index: 1
+
+- client: DistanceCompensator:out_
+  n_channels: 45
+  start_index: 1
+  connections:
+    - client: system:playback_
+      start_index: 1
