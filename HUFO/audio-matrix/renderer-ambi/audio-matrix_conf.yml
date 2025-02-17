@@ -1,0 +1,34 @@
+port: 54321
+n_input_channels: 64
+# osc_position_path: /source/pos/ # expect positions in aed format at position_path/aed or at position_path/azim, position_path/elev, position_path/dist
+
+tracks:
+  - name: hoa
+    modules:
+      - gain:
+          factor: 0
+          osc_controllable: true
+          osc_path: /source/send/hoa
+      - hoa_encoder:
+          order: 3
+          osc_controllable: true
+          osc_path: /source/pos/aed
+      - gain:
+          factor: 0.492
+      - filter:
+          type: HP
+          freq: 100
+      - delay: 8 # delay to sync with the sub, 8 ms is a rough guesstimate
+  - name: sub
+    modules:
+      - gain:
+          factor: 0
+          osc_controllable: true
+          osc_path: /source/send/sub
+      - distance_gain:
+          osc_path: /source/pos/dist
+      - sum
+      - gain: 0.1
+      - filter:
+          type: LP
+          freq: 100

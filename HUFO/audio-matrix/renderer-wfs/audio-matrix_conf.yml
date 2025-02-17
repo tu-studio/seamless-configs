@@ -1,0 +1,20 @@
+port: 54321
+n_input_channels: 64
+
+tracks:
+  - name: wfs
+    modules:
+      - gain:
+          factor: 0
+          osc_controllable: true
+          osc_path: /source/send/wfs
+      - gain:
+          factor: 1
+#       - filter:
+#           type: HP # HP/LP
+#           freq: 100 # in Hz
+#       - limiter:
+#           type: brickwall
+#           threshold: 0
+#       - delay:
+#           time: 0 # in ms
