@@ -20,7 +20,7 @@ renderername = 'renderer'
 
 if get_option('node') == 'none'
     error('Please specify node with -Dnode=...')
-elif get_option('node') == renderername + "01"
+elif get_option('node') == renderername + '01'
     subdir('osc-kreuz')
 elif get_option('node').startswith(renderername)
 else
