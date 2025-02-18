@@ -17,3 +17,4 @@ if get_option('node') == renderername + '02' or get_option('node') == rendererna
             get_option('prefix') / get_option('sysconfdir') / 'wonder')
     )
     endif
+endif
