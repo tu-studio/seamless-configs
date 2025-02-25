@@ -22,6 +22,7 @@ if get_option('node') == 'none'
     error('Please specify node with -Dnode=...')
 elif get_option('node') == renderername + '01'
     subdir('osc-kreuz')
+    subdir('ambisonics')
 elif get_option('node').startswith(renderername)
 else
     error('Unknown node specified.')
