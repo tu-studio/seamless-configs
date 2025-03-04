@@ -18,16 +18,25 @@ endif
 playername = 'playstation'
 renderername = 'renderer'
 
-if get_option('node') == 'none'
+nodename = get_option('node')
+
+# do node specific installations
+# empty cases to check correctness of nodes
+if nodename == 'none'
     error('Please specify node with -Dnode=...')
-elif get_option('node') == renderername + '01'
+elif nodename == renderername + '01'
     subdir('osc-kreuz')
     subdir('ambisonics')
-elif get_option('node').startswith(renderername)
+elif nodename.startswith(renderername)
+    subdir('wonder')
+elif nodename == playername
 else
     error('Unknown node specified.')
 endif
 
-subdir('audio-matrix')
-subdir('wonder')
 subdir('jack-connection-manager')
+
+# do installations for all renderers
+if nodename.startswith(renderername)
+    subdir('audio-matrix')
+endif
