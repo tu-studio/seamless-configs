@@ -5,8 +5,8 @@
   <VALUE name="windowX" val="2942"/>
   <VALUE name="windowY" val="334"/>
   <VALUE name="audioSetup">
-    <DEVICESETUP deviceType="ALSA" audioOutputDeviceName="Default ALSA Output (currently PipeWire Media Server)"
-                 audioInputDeviceName="Default ALSA Output (currently PipeWire Media Server)"
+    <DEVICESETUP deviceType="JACK" audioOutputDeviceName="Family 17h/19h HD Audio Controller Pro"
+                 audioInputDeviceName="Family 17h/19h HD Audio Controller Pro"
                  audioDeviceRate="48000.0"/>
   </VALUE>
   <VALUE name="shouldMuteInput" val="0"/>
