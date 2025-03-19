@@ -24,7 +24,7 @@ global:
 receivers:
   - type: audiomatrix
     hosts:
-      - hostname: newmark.ak.tu-berlin.de
+      - hostname: riviera.ak.tu-berlin.de
         port: 8080
     paths:
       - path: /source/send/wfs
