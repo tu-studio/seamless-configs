@@ -8,7 +8,7 @@ global:
   number_direct_sends: 46 # including subwoofer
   send_changes_only: true # checks every input for changes, if set to 1 might be slower
   data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
-  render_units: ["wfs"]
+  render_units: ["ambi", "wfs"] # include ambisonics so the render unit ordering in the seamless-plugins is correct
   room_scaling_factor: 25.4492
   room_name: H0104
   room_polygon:
