@@ -1,0 +1,6 @@
+[Unit]
+Description=Twonders
+Requires=twonder@1.service twonder@2.service twonder@3.service twonder@4.service
+
+[Install]
+WantedBy=default.target
