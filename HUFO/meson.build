@@ -30,7 +30,7 @@ elif nodename == renderername + '01'
 elif nodename.startswith(renderername)
     subdir('wonder')
 elif nodename == playername
-    subdir(showcontrol)
+    subdir('showcontrol')
 else
     error('Unknown node specified.')
 endif
