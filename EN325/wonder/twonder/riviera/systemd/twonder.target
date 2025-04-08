@@ -1,6 +1,7 @@
 [Unit]
 Description=Twonders
 Requires=twonder@0.service twonder@1.service twonder@2.service twonder@3.service
+After=network-online.target
 
 [Install]
 WantedBy=default.target
