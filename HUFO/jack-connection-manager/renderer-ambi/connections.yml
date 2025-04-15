@@ -1,4 +1,4 @@
-## inputs from danteface
+## inputs from playstation
 - client: system:capture_
   n_channels: 32
   connections:
@@ -17,36 +17,6 @@
 - client: system:capture_
   n_channels: 1
   start_index: 50
-  connections:
-    - client: system:playback_
-      start_index: 46
-    - client: system:playback_
-      start_index: 47
-    - client: system:playback_
-      start_index: 48
-    - client: system:playback_
-      start_index: 49
-  
-## inputs from playstation ##############
-- client: system:capture_
-  n_channels: 32
-  start_index: 65
-  connections:
-    - client: audio-matrix:input_
-      start_index: 0
-
-# Encoded Ambisonics to decoder
-- client: system:capture_
-  n_channels: 16
-  start_index: 97
-  connections:
-    - client: AllRADecoder:in_
-      start_index: 1
-
-# LFE direct
-- client: system:capture_
-  n_channels: 1
-  start_index: 114
   connections:
     - client: system:playback_
       start_index: 46

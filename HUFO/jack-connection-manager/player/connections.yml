@@ -3,6 +3,12 @@
   connections:
     - client: system:playback_
 
+- client: system:capture_
+  n_channels: 64
+  start_index: 65
+  connections:
+    - client: system:playback_
+
 - client: REAPER:out
   n_channels: 64
   connections:
