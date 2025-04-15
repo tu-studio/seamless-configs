@@ -1,5 +1,5 @@
 port: 54321
-n_input_channels: 64
+n_input_channels: 32
 
 tracks:
   - name: wfs
