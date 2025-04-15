@@ -6,14 +6,6 @@
     - client: audio-matrix:input_
       start_index: 0
 
-# system ins from playstation to audiomatrix
-- client: system:capture_
-  n_channels: 32
-  start_index: 65
-  connections:
-    - client: audio-matrix:input_
-      start_index: 0
-
 # audiomatrix to twonders
 - client: audio-matrix:wfs_
   n_channels: 32
