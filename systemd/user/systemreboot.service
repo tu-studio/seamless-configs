@@ -1,0 +1,7 @@
+[Unit]
+Description=Jack Audio Server
+
+[Service]
+Type=simple
+# ExecStartPre=/bin/sleep 30
+ExecStart=/sbin/shutdown -r now
