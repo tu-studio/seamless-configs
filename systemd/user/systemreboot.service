@@ -1,7 +1,7 @@
 [Unit]
-Description=Jack Audio Server
+Description=Restart the PC after a timeout of 240 seconds
 
 [Service]
 Type=simple
-# ExecStartPre=/bin/sleep 30
+ExecStartPre=/bin/sleep 240
 ExecStart=/sbin/shutdown -r now
