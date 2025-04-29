@@ -1,5 +1,6 @@
 [Unit]
 Description=Jack Audio Server
+OnFailure=systemreboot.service
 
 [Install]
 WantedBy=default.target
