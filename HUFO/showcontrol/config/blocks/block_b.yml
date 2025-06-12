@@ -2,14 +2,14 @@ name: block_b
 length: 170
 track_padding: 10
 tracks:
-  - trailer
-  - pune
-  - brunnen
-  - sufi
-  - iwillnotweep
-  - trailer
-  - oksus
-  - liquidcontinent
-  - thepassage
-  - doublefeedback
-  - transformation
+    - trailer
+    - transformation
+    - thepassage
+    - pune
+    - brunnen
+    - sufi
+    - iwillnotweep
+    - trailer
+    - oksus
+    - liquidcontinent
+    - doublefeedback
