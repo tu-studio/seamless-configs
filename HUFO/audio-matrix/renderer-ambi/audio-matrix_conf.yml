@@ -14,7 +14,7 @@ tracks:
           osc_controllable: true
           osc_path: /source/pos/aed
       - gain:
-          factor: 5.5
+          factor: 5
       - filter:
           type: HP
           freq: 100
@@ -28,7 +28,7 @@ tracks:
       - distance_gain:
           osc_path: /source/pos/dist
       - sum
-      - gain: 0.2
+      - gain: 0.15
       - filter:
           type: LP
           freq: 100
