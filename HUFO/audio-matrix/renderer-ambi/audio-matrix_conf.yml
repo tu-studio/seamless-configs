@@ -24,9 +24,20 @@ tracks:
       - gain:
           factor: 0
           osc_controllable: true
-          osc_path: /source/send/sub
+          osc_path: /source/send/subcrossover
       - distance_gain:
           osc_path: /source/pos/dist
+      - sum
+      - gain: 0.1
+      - filter:
+          type: LP
+          freq: 100
+  - name: lfe
+    modules:
+      - gain:
+          factor: 0
+          osc_controllable: true
+          osc_path: /source/send/lfe
       - sum
       - gain: 0.1
       - filter:
