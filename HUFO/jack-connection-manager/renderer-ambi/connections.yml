@@ -42,6 +42,20 @@
     - client: system:playback_
       start_index: 49
 
+# LFE from audio-matrix
+- client: audio-matrix:lfe_
+  n_channels: 1
+  start_index: 0
+  connections:
+    - client: system:playback_
+      start_index: 46
+    - client: system:playback_
+      start_index: 47
+    - client: system:playback_
+      start_index: 48
+    - client: system:playback_
+      start_index: 49
+
 # HOA
 - client: audio-matrix:hoa_
   n_channels: 16
