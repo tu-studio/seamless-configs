@@ -1,7 +1,7 @@
-id: pagtataip
-title_de: Pagtataip
+name: pagtataip
+title: Pagtataip
 title_en: Pagtataip
-artist: mele
+# artist: mele
 audio_index: 14
 video_index: 5
 duration:
@@ -9,5 +9,5 @@ duration:
   seconds: 00
 description: |
   platzhalter
-description_en: |
-  placeholder
+# description_en: |
+  # placeholder
