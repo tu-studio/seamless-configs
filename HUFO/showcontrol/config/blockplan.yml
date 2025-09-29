@@ -5,11 +5,13 @@ default:
   #   - default
   #   - default
 
+  # blocks:
+  #   - block_a
+  #   - student_pieces
+  #   - block_b
+  #   - block_a  
   blocks:
-    - block_a
-    - student_pieces
-    - block_b
-    - block_a
+    - cluster_familie
 
 # monday:
 #   blocks:
