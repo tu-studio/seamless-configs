@@ -71,9 +71,9 @@ receivers:
     updateintervall: 0
   - type: audiomatrix
     hosts:
-      - hostname: 3900-ZG-RE-02.asg
+      - hostname: 3900-ZG-RE-02
         port: 54321
-      - hostname: 3900-ZG-RE-03.asg
+      - hostname: 3900-ZG-RE-03
         port: 54321
     paths:
       - path: /source/send/wfs
