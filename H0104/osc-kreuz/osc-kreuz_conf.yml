@@ -37,3 +37,7 @@ receivers:
         renderer: wfs
         type: gain
     updateintervall: 0
+  - type: twonder
+    hostname: 239.2.3.9
+    port: 58300
+    multicast: true
