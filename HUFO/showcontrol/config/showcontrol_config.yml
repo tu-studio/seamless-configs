@@ -1,0 +1,8 @@
+reaper_hostname: 127.0.0.1
+reaper_port: 8000
+listen_ip: 0.0.0.0
+osc_port: 9002
+http_port: 8080
+broadcast_ip: 10.30.70.255
+video_port: 12339
+info_port: 12340

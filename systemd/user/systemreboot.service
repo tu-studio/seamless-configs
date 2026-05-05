@@ -1,0 +1,9 @@
+[Unit]
+Description=Restart the PC after a timeout of 240 seconds
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 240
+ExecStart=/sbin/shutdown -r now
+TimeoutSec=15min
+TimeoutStartSec=15min

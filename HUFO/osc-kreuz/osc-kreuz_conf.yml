@@ -8,7 +8,7 @@ global:
   number_direct_sends: 46 # including subwoofer
   send_changes_only: true # checks every input for changes, if set to 1 might be slower
   data_port_timeout: 2 # time a change in the ui-port blocks incoming automation, set to 0 to deactivate this feature
-  render_units: ["ambi", "wfs"]
+  render_units: ["ambi", "wfs", "reverb", "lfe"]
   room_scaling_factor: 12.108 # all incoming positon changes are scaled by this factor
   room_name: HuFo
   room_polygon:
@@ -56,7 +56,7 @@ receivers:
       - path: /source/send/hoa
         renderer: ambi
         type: gain
-      - path: /source/send/sub
+      - path: /source/send/subcrossover
         renderer: ambi
         type: gain
       - path: /source/pos/aed
@@ -65,12 +65,15 @@ receivers:
       - path: /source/pos/dist
         type: position
         format: dist
+      - path: /source/send/lfe
+        type: gain
+        renderer: lfe
     updateintervall: 0
   - type: audiomatrix
     hosts:
-      - hostname: 3900-ZG-RE-02.asg
+      - hostname: 3900-ZG-RE-02.tu-ctrl
         port: 54321
-      - hostname: 3900-ZG-RE-03.asg
+      - hostname: 3900-ZG-RE-03.tu-ctrl
         port: 54321
     paths:
       - path: /source/send/wfs

@@ -24,6 +24,7 @@ else
 endif
 
 install_data('systemd/user/jack.service', install_dir: '/etc/systemd/user')
+install_data('systemd/user/systemreboot.service', install_dir: '/etc/systemd/user')
 
 summary({'Location': get_option('location'),
          'Node': get_option('node'),
