@@ -173,7 +173,7 @@
   day_of_week: 0,1,2,3,4,5,6
   hour: 16
   minute: 25
-  second: 37
+  second: 43
 - track_id: fuga
   audio_index: 20 # included for compatibility 
   video_index: 19  # included for compatibility 
@@ -181,15 +181,15 @@
   day_of_week: 0,1,2,3,4,5,6
   hour: 16
   minute: 46
-  second: 14
+  second: 26
 - track_id: fuga
   audio_index: 20 # included for compatibility 
   video_index: 19  # included for compatibility 
   command: play
   day_of_week: 0,1,2,3,4,5,6
   hour: 17
-  minute: 6
-  second: 51
+  minute: 7
+  second: 9
 - track_id: fuga
   audio_index: 20 # included for compatibility 
   video_index: 19  # included for compatibility 
@@ -197,7 +197,7 @@
   day_of_week: 0,1,2,3,4,5,6
   hour: 17
   minute: 27
-  second: 28
+  second: 52
 - track_id: fuga
   audio_index: 20 # included for compatibility 
   video_index: 19  # included for compatibility 
@@ -205,20 +205,12 @@
   day_of_week: 0,1,2,3,4,5,6
   hour: 17
   minute: 48
-  second: 5
+  second: 35
 - track_id: fuga
   audio_index: 20 # included for compatibility 
   video_index: 19  # included for compatibility 
   command: play
   day_of_week: 0,1,2,3,4,5,6
   hour: 18
-  minute: 8
-  second: 42
-- track_id: fuga
-  audio_index: 20 # included for compatibility 
-  video_index: 19  # included for compatibility 
-  command: play
-  day_of_week: 0,1,2,3,4,5,6
-  hour: 18
-  minute: 29
-  second: 19
+  minute: 9
+  second: 18

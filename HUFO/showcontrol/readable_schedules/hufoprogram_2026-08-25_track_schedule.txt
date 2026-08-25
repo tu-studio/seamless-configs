@@ -53,5 +53,5 @@ The Passage
 	Mo,Di,Mi,Do,Fr,Sa,So	13:25
 
 Fuga
-	Mo,Di,Mi,Do,Fr,Sa,So	16:05, 16:25, 16:46, 17:06, 17:27, 17:48, 18:08, 18:29
+	Mo,Di,Mi,Do,Fr,Sa,So	16:05, 16:25, 16:46, 17:07, 17:27, 17:48, 18:09
 

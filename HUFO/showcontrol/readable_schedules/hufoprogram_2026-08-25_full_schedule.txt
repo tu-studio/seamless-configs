@@ -19,10 +19,9 @@ Mo,Di,Mi,Do,Fr,Sa,So	14:55:00	Pagtatahip
 Mo,Di,Mi,Do,Fr,Sa,So	15:20:00	The Overflowing Archive
 Mo,Di,Mi,Do,Fr,Sa,So	15:45:00	Sufi Sonics
 Mo,Di,Mi,Do,Fr,Sa,So	16:05:00	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	16:25:37	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	16:46:14	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	17:06:51	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	17:27:28	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	17:48:05	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	18:08:42	Fuga
-Mo,Di,Mi,Do,Fr,Sa,So	18:29:19	Fuga
+Mo,Di,Mi,Do,Fr,Sa,So	16:25:43	Fuga
+Mo,Di,Mi,Do,Fr,Sa,So	16:46:26	Fuga
+Mo,Di,Mi,Do,Fr,Sa,So	17:07:09	Fuga
+Mo,Di,Mi,Do,Fr,Sa,So	17:27:52	Fuga
+Mo,Di,Mi,Do,Fr,Sa,So	17:48:35	Fuga
+Mo,Di,Mi,Do,Fr,Sa,So	18:09:18	Fuga
