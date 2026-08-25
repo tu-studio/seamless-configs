@@ -11,8 +11,9 @@ default:
   #   - block_b
   #   - block_a  
   blocks:
-    - cluster_familie
-
+    # - cluster_familie
+    - fuga_morning
+    - fuga_loop
 # monday:
 #   blocks:
 #     - block_a
