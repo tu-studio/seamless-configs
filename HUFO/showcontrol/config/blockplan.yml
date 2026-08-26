@@ -12,7 +12,12 @@ default:
   #   - block_a  
   blocks:
     # - cluster_familie
-    - fuga_morning
+#    - fuga_morning
+    - fuga_loop
+    - fuga_loop
+    - fuga_loop
+    - fuga_loop
+    - fuga_loop
     - fuga_loop
 # monday:
 #   blocks:
