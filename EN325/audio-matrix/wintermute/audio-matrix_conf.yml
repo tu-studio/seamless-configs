@@ -6,7 +6,6 @@ tracks:
     modules:
       - gain:
           factor: 0
-          osc_controllable: true
           osc_path: /source/send/wfs
       - gain:
           factor: 1

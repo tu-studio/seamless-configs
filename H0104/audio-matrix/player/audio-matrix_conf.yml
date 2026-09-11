@@ -7,7 +7,6 @@ tracks:
     modules:
       - gain:
           factor: 0
-          osc_controllable: true
           osc_paths: /source/send/wfs
       - gain:
           factor: 1
@@ -25,7 +24,6 @@ tracks:
 #     modules:
 #       - gain: 
 #           factor: 1
-#           osc_controllable: true
 #           osc_paths: hoa
 #       - distance_compensator:
 #       - hoa_encoder:
@@ -42,7 +40,6 @@ tracks:
 #   - name: lfe
 #     modules:
 #       - gain: 1
-#         osc_controllable: true
 #         osc_paths: lfe
 #       - sum:
 #       - filter:
@@ -57,7 +54,6 @@ tracks:
 #   - name: lf_crossover
 #     modules:
 #       - gain: 1
-#         osc_controllable: true
 #         osc_paths: [wfs, hoa]
 #       - distance_compensator
 #       - sum
