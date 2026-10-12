@@ -7,11 +7,23 @@ tracks:
       - gain:
           factor: 0
           osc_path: /source/send/wfs
+
+      # processing fuer die messung
       - gain:
-          factor: 1
+          factor: 0.2
+          osc_path: /wfs/gain
+      - filter:
+          type: HP
+          freq: 30
+          osc_path: /wfs/filter
+      - delay:
+          time: 0
+          osc_path: /wfs/delay
+
 #       - filter:
 #           type: HP # HP/LP
 #           freq: 100 # in Hz
+#           osc_path: /source/filter/wfs
 #       - limiter:
 #           type: brickwall
 #           threshold: 0
