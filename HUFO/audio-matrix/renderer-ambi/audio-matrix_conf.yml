@@ -35,7 +35,8 @@ tracks:
       - sum
 
       # processing fuer die messung
-      - gain: 0.15
+      - gain:
+          factor: 0.15
           osc_path: /sub/gain
       - filter:
           type: LP
@@ -53,7 +54,8 @@ tracks:
       - sum
 
       # processing fuer die messung
-      - gain: 0.2
+      - gain:
+          factor: 0.2
           osc_path: /lfe/gain
       - filter:
           type: LP
@@ -62,3 +64,4 @@ tracks:
       - delay:
           time: 0
           osc_path: /lfe/delay
+
