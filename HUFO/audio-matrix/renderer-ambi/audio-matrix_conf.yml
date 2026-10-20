@@ -9,17 +9,19 @@ tracks:
           factor: 0
           osc_path: /source/send/hoa
 
+      # CURRENTLY DISABLED because not all Ambisonics is routed through audio-matrix
+      # as for now, ambisonics filtering/delaying/gainstaging is done in QSC
       # processing fuer die messung
-      - gain:
-          factor: 1
-          osc_path: /hoa/gain
-      - filter:
-          type: HP
-          freq: 100
-          osc_path: /hoa/filter
-      - delay:
-          time: 8 # delay to sync with the sub, 8 ms is a rough guesstimate
-          osc_path: /hoa/delay
+      # - gain:
+      #     factor: 1
+      #     osc_path: /hoa/gain
+      # - filter:
+      #     type: HP
+      #     freq: 100
+      #     osc_path: /hoa/filter
+      # - delay:
+      #     time: 8 # delay to sync with the sub, 8 ms is a rough guesstimate
+      #     osc_path: /hoa/delay
 
       - hoa_encoder:
           order: 3
