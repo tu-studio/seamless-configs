@@ -10,7 +10,7 @@ tracks:
 
       # processing durch messung bestimmt
       - gain:
-          factor: 0.2
+          factor: 0.707
           osc_path: /wfs/gain
       - delay:
           time: 9.32
