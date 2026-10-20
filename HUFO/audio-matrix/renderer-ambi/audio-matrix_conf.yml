@@ -36,9 +36,9 @@ tracks:
           osc_path: /source/pos/dist
       - sum
 
-      # processing fuer die messung
+      # processing durch messung bestimmt
       - gain:
-          factor: 0.15
+          factor: 0.5
           osc_path: /sub/gain
       - filter:
           type: LP
@@ -57,7 +57,7 @@ tracks:
 
       # processing fuer die messung
       - gain:
-          factor: 0.2
+          factor: 0.35
           osc_path: /lfe/gain
       - filter:
           type: LP

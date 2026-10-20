@@ -8,17 +8,13 @@ tracks:
           factor: 0
           osc_path: /source/send/wfs
 
-      # processing fuer die messung
+      # processing durch messung bestimmt
       - gain:
           factor: 0.2
           osc_path: /wfs/gain
-      - filter:
-          type: HP
-          freq: 30
-          osc_path: /wfs/filter
       - delay:
-          time: 0
-          osc_path: /wfs/delay
+          time: 9.32
+          # osc_path: /wfs/delay
 
 #       - filter:
 #           type: HP # HP/LP
