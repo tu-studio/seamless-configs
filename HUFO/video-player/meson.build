@@ -6,14 +6,11 @@ dir = 'follower'
  
 if get_option('node').startswith(videoname + '1')
     dir = 'leader'
-    # install_subdir('leader', strip_directory : true, install_dir : get_option('sysconfdir') / 'mpv')
-# else
-#     install_subdir('follower', strip_directory : true, install_dir : get_option('sysconfdir') / 'mpv')
 endif
 
 install_subdir(dir, install_dir: conf_path + install_postfix, strip_directory: true)
-
-# install_subdir('systemd', install_dir: '/etc/systemd/user', strip_directory: true )
+install_subdir('scripts', install_dir: conf_path + install_postfix / 'scripts', strip_directory: true)
+install_subdir('systemd', install_dir: '/etc/systemd/user', strip_directory: true )
 
 if get_option('versioned_install')
     meson.add_install_script(

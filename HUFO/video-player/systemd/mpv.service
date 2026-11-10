@@ -1,0 +1,20 @@
+[Unit]
+Description=Start mpv
+
+[Service]
+Type=exec
+WorkingDirectory=/home/tu-studio/content
+# X11 display to connect to
+Environment=DISPLAY=:0
+# X11 authorization file used to authenticate with the X server
+Environment=XAUTHORITY=/home/tu-studio/.Xauthority
+
+# Wait until the essential XFCE components are running before starting mpv
+ExecStartPre=/bin/sh -c 'until pgrep -x xfwm4 >/dev/null && pgrep -x xfce4-panel >/dev/null && pgrep -x xfdesktop >/dev/null && pgrep -x xfsettingsd >/dev/null; do sleep 0.2; done'
+
+ExecStart=/usr/bin/mpv --playlist=playlist.txt
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=default.target

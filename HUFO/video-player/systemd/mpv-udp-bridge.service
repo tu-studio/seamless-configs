@@ -1,0 +1,10 @@
+[Unit]
+Description=UDP to socket bridge for mpv
+[Service]
+Type=exec
+ExecStartPre=/bin/sh -c "touch /tmp/mpvsocket && chmod 777 /tmp/mpvsocket"
+ExecStart=/usr/bin/socat -u UDP4-RECVFROM:12339,broadcast,fork,reuseaddr SYSTEM:"\"/bin/grep -E 'play|pause' | socat - /tmp/mpvsocket \""
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
