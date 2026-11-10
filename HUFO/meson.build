@@ -17,6 +17,7 @@ endif
 
 playername = 'playstation'
 renderername = 'renderer'
+videoname = 'video_player_'
 
 nodename = get_option('node')
 
@@ -31,6 +32,8 @@ elif nodename.startswith(renderername)
     subdir('wonder')
 elif nodename == playername
     subdir('showcontrol')
+elif nodename.startswith(videoname)
+    subdir('video-player')
 else
     error('Unknown node specified.')
 endif
