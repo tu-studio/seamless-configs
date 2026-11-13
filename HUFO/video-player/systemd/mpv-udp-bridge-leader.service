@@ -2,9 +2,11 @@
 Description=UDP control bridge for leader mpv
 After=network.target
 [Service]
+StandardOutput=journal
+StandardError=journal
 Type=exec
 WorkingDirectory=/home/tu-studio/content
-ExecStart=/usr/bin/socat -u UDP4-RECVFROM:12339,broadcast,fork,reuseaddr UNIX-CONNECT:/tmp/mpvsocket
+ExecStart=/usr/bin/socat -u -v UDP4-RECVFROM:12339,broadcast,fork,reuseaddr UNIX-CONNECT:/tmp/mpvsocket
 Restart=on-failure
 RestartSec=1
 
