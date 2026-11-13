@@ -13,7 +13,7 @@ local opts = {
     speed_adjust_threshold = 0.02,   -- seconds - below this, reset to normal speed (20ms)
     max_speed_adjust = 0.5,          -- maximum speed adjustment (e.g., 0.5 = 50% faster/slower)
     initial_offset = 0.015,          -- initial offset in seconds (e.g., 0.015 = 15ms)
-    show_osd = false,                -- show sync info on screen (toggle with 'i' key on follower)
+    show_osd = true,                 -- show sync info on screen (toggle with 'i' key on follower)
     verbose = false,                 -- print sync command
     silent = false,                  -- suppress info
 }

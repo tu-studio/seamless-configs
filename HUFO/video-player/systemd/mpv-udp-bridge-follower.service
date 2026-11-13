@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=exec
 WorkingDirectory=/home/tu-studio/content
-ExecStart=/bin/bash -c 'socat -v UDP4-RECVFROM:12338,broadcast,fork,reuseaddr UNIX-CONNECT:/tmp/mpvsocket & socat -u -v UDP4-RECVFROM:12339,broadcast,fork,reuseaddr UNIX-CONNECT:/tmp/mpvsocket & wait -n'
+ExecStart=/bin/bash -c 'socat -u UDP4-RECVFROM:12338,broadcast,fork,reuseaddr UNIX-CONNECT:/tmp/mpvsocket & socat -u -v UDP4-RECVFROM:12339,broadcast,fork,reuseaddr UNIX-CONNECT:/tmp/mpvsocket & wait -n'
 Restart=on-failure
 RestartSec=1
 
