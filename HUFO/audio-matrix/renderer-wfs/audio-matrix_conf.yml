@@ -11,7 +11,7 @@ tracks:
       # processing durch messung bestimmt
       # 0.335 = -9.5dB
       - gain:
-          factor: 0.335
+          factor: 1.8425
           osc_path: /wfs/gain
       - delay:
           time: 9.32

@@ -8,6 +8,8 @@ tracks:
       - gain:
           factor: 0
           osc_path: /source/send/hoa
+      - gain:
+          factor: 5.5
 
       # CURRENTLY DISABLED because not all Ambisonics is routed through audio-matrix
       # as for now, ambisonics filtering/delaying/gainstaging is done in QSC
@@ -38,7 +40,7 @@ tracks:
 
       # processing durch messung bestimmt
       - gain:
-          factor: 0.5
+          factor: 2.75
           osc_path: /sub/gain
       - filter:
           type: LP
@@ -57,7 +59,7 @@ tracks:
 
       # processing fuer die messung
       - gain:
-          factor: 0.35
+          factor: 1.925
           osc_path: /lfe/gain
       - filter:
           type: LP
